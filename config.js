@@ -2,11 +2,11 @@
 
 module.exports = {
   url: "https://developer-diary.netlify.com",
-  title: "Developer Diary",
+  title: "dev Diary",
   tagline: "Autodidact developer and sometimes hoop-jumper",
   copyright: "© 2019 willjw3, All rights reserved",
   author: {
-    name: "WILL JAY",
+    name: "WILL WARD",
     bio: "Self-taught web developer and whisky aficionado",
     contacts: {
       linkedin: "https://www.linkedin.com/in/will-ward-65234a170/",
