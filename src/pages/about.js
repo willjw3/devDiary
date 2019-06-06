@@ -1,11 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { FaCheckCircle } from "react-icons/fa"
 import "./index.css"
 
 import Sidebar from "../components/sidebar/Sidebar"
-import TechTag from "../components/tags/TechTag"
+
 
 const AboutPage = (props) => {
     return (
@@ -19,46 +18,19 @@ const AboutPage = (props) => {
                 <div className="post-main">
                     <SEO title="About" />
                     <div className="mt-3">
-                        <h2 className="heading">About</h2>
-                        <p><i>Developer Diary is a Gatsby Starter blog template created with web developers in mind, but really, anyone can use it. It's totally usuable right out of the box, but minimalist enough to be easily modifiable to suit your needs.</i></p>
-                        <br />
-                        <h4>Features</h4>
+                        <h2 className="heading">About Me</h2>
                         <div>
-                            <span className="text-success d-inline-block" title="blazing">
-                                <FaCheckCircle size={26} style={{ color: "success" }} />
-                            </span>
-                            <p className="d-inline-block ml-3 w-75 align-top">Blazing fast, as you'd expect from a Gatsby site</p>
+                            <h4 className="d-inline">Roles: </h4><p className="d-inline-block ml-2"><i>software developer, writer and educator</i></p>
                         </div>
                         <div>
-                            <span className="text-success d-inline-block" title="tags">
-                                <FaCheckCircle size={26} style={{ color: "success" }} />
-                            </span>
-                            <p className="d-inline-block ml-3 w-75 align-top">Tech tags designed for web developers</p>
-                            <div className="ml-5">
-                                <TechTag tag="react" tech="React" name="DiReact" size={20} color="deepskyblue" />
-                                <TechTag tag="nodejs" tech="Node.js" name="DiNodejsSmall" size={20} color="lightgreen" />
-                                <TechTag tag="html" tech="HTML" name="FaHtml5" size={20} color="darkorange" />
-                                <TechTag tag="css" tech="CSS" name="DiCss3Full" size={20} color="teal" />
-                            </div>  
+                            <h4 className="d-inline">Tech I'm currently obsessed with: </h4><p className="d-inline-block ml-2"><i>Apollo-GraphQL, Gatsby</i></p>
                         </div>
-                        <div className="mt-4">
-                            <span className="text-success d-inline-block" title="prism">
-                                <FaCheckCircle size={26} style={{ color: "success" }} />
-                            </span>
-                            <p className="d-inline-block ml-3 w-75 align-top">Includes Prism for code block styling in markdown files</p>
-                        </div>
-                        <div>
-                            <span className="text-success d-inline-block" title="icons">
-                                <FaCheckCircle size={26} style={{ color: "success" }} />
-                            </span>
-                            <p className="d-inline-block ml-3 w-75 align-top">Developer-relevant social-media icon links including GitHub, Stack Overflow and freeCodeCamp</p>
-                        </div>
-                        <div>
-                            <span className="text-success d-inline-block" title="mobile">
-                                <FaCheckCircle size={26} style={{ color: "success" }} />
-                            </span>
-                            <p className="d-inline-block ml-3 w-75 align-top">Mobile responsive, of course</p>
-                        </div>
+                        <hr/>
+                        <p>An old dog learning new tricks in a brave new world, I'll build just about anything if I can, but I mostly build full-stack applications. One example of my work is the Gatsby Starter from which I've built this blog. Check out <a href="https://www.gatsbyjs.org/starters/willjw3/gatsby-starter-developer-diary/">my official starter in the Gatsby Starter Library</a> and, if you're so inclined, please use it to make your own developer blog (or any kind of blog, really). And, if you do, please tweet me with the finished project.
+                        </p>
+                        <hr/>
+                        <h4>Availability</h4>
+                        <p>I'm usually available to take on projects, so contact me and maybe we can work together. You can find out more about me at my <a href="https://willjw3.github.io/">personal web site</a>.</p>
                     </div>
                 </div>
             </div>
