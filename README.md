@@ -7,8 +7,9 @@
   Developer Log
 </h2>
 
-This is my developer blog. It was built with an official Gatsby starter that I created. You can find that starter in the Gatsby Starter Library.<br>
+This is my developer blog. It was built with an official Gatsby starter that I created. You can find that starter in the Gatsby Starter Library. (See below)<br>
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a1303249-438b-40a2-a543-999f60571d22/deploy-status)](https://app.netlify.com/sites/developer-log/deploys)
+<br>
 
 ![devDiary](https://dl.dropboxusercontent.com/s/605o40f9b92e9m8/devdiary.jpg?dl=0)
 
