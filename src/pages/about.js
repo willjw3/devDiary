@@ -7,7 +7,7 @@ import "./index.css"
 import Sidebar from "../components/sidebar/Sidebar"
 import TechTag from "../components/tags/TechTag"
 
-const BlogPost = (props) => {
+const AboutPage = (props) => {
     return (
         <Layout>
             <SEO title="About" />
@@ -59,8 +59,6 @@ const BlogPost = (props) => {
                             </span>
                             <p className="d-inline-block ml-3 w-75 align-top">Mobile responsive, of course</p>
                         </div>
-                       
-
                     </div>
                 </div>
             </div>
@@ -70,4 +68,5 @@ const BlogPost = (props) => {
 
 
 
-export default BlogPost
+export default AboutPage
+
