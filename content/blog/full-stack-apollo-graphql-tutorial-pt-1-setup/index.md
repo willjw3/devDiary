@@ -5,14 +5,14 @@ published: true
 date: '2019-07-17'
 ---
 
-**Full Project Prerequisites:** Ability to build a full-stack web app using Node and React, and a basic understanding of what GraphQL is. For further info, follow this link: [What is GraphQL](https://graphql.org/)<br>
+**Full Project Prerequisites:** Ability to build a full-stack web app using Node and React, and a basic understanding of what GraphQL is. For further info, follow this link: [What is GraphQL?](https://graphql.org/)<br>
 **Part 1 Prerequisites:** Ability to set up a Node.js server with a framework such as Express.
 
-Apollo GraphQL is an excellent platform for building full-stack GraphQL web applications, and [Apollo Docs](https://www.apollographql.com/docs/) has a full-stack tutorial to help new users get started. This tutorial loosely parallels that one; however, this one should be a bit easier to follow. Our example app won't be anywhere near as cool or good-looking as the one in the Apollo Docs tutorial, but you'll be able to write your own Apollo-React-Node project boilerplate code by the time you're done with this one.
+Apollo GraphQL is an excellent platform for building full-stack GraphQL web applications, and [Apollo Docs](https://www.apollographql.com/docs/) has a full-stack tutorial to help new users get started. This tutorial loosely parallels that one; however, this one should be a bit easier to follow. Our example app won't be anywhere near as cool or as good-looking as the one in the Apollo Docs tutorial, but you'll be able to write your own Apollo-React-Node project boilerplate code by the time you're done with this one.
 
 ###Simple Overview###
 
-We'll use two data sources for our project, one an external API and the other an internal API. The external API comes from the US Geological Survey (USGS) and returns earthquake data. The internal one *we'll* make, and it'll be an API that returns information about registered users of the app, such as a user name, an email address, a user id, and a list of saved events (earthquakes). Also, since GraphQL is database-agnostic, we'll write a simple mock database along with data retrieval functions, and forgo the use of something like MongoDB or an SQL database. Finally, we won't be using a state container like Redux for our project; we'll take advantage of the way that Apollo Client allows us to manage local state in the Apollo cache and query it in parallel with remote data using GraphQL. 
+We'll use two data sources for our project, one an external API and the other an internal API. The external API comes from the US Geological Survey (USGS) and returns earthquake data. The internal one *we'll* make, and it'll be an API that returns information about registered users of the app, such as a user name, an email address, a user id, and a list of saved events (earthquakes). Also, since GraphQL is database-agnostic, we'll write a simple mock database along with data retrieval functions, and forgo the use of something like MongoDB or an SQL database. Finally, we won't be using a state container like Redux for our project; we'll take advantage of the way Apollo Client allows us to manage local state in the Apollo cache and query it in parallel with remote data using GraphQL. 
 
 ###Getting Started###
 **Note:** *We'll be using npm here. Feel free, of course, to use your package manager of choice.* 
@@ -133,7 +133,7 @@ type Quake {
 ```
 <br>
 
-Notice how the Quake type resembles a schema in Mongoose. You'll see, however, that after each key-value pair, no comma is necessary.
+Notice how the Quake type slightly resembles a schema in Mongoose. The differences, however, are easy to see. For example, after each key-value pair, no comma is necessary.
 <br>
 
 **The User Type**
@@ -169,7 +169,7 @@ type Mutation {
 ```
 <br>
 
-The `saveRecord` mutation does exactly what the name implies, it saves a record of a quake of specific interest to the user. The `deleteRecord` mutation deletes a specific record the user no longer wishes to have in the `records` list. We've made it so both of these mutations provide a response to show a user that their list of records has been updated. That response has a type as well.
+The `saveRecord` mutation does exactly what the name implies, it saves a record of a quake of specific interest to the user. The `deleteRecord` mutation deletes a specific record the user no longer wishes to have in the `records` list. We've made it so both of these mutations provide a response to show a user whether their list of records has been updated or not. That response has a type as well.
 
 **The RecordUpdateResponse Type**
 <br>
@@ -279,6 +279,24 @@ Also, let's add a `server` script to our `package.json` file so that we can run 
   }
 }
 ```
+<br>
+
+Now, run the server.
+```
+$ npm run server
+```
+<br>
+
+Hopefully, you see in the console:
+```
+🚀 Server ready at http://localhost:4000/
+```
+<br>
+
+If not, debug time for you. Good luck!
+<br>
+
+So, we've done the basic setup for our project. In the next part, we'll explore what things will look like from the front-end with [GraphQL Playground](https://github.com/prisma/graphql-playground). See you there!
 
 
 
