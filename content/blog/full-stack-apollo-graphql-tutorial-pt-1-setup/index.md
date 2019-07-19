@@ -7,6 +7,11 @@ date: '2019-07-17'
 
 **Full Project Prerequisites:** Ability to build a full-stack web app using Node and React, and a basic understanding of what GraphQL is. For further info, follow this link: [What is GraphQL?](https://graphql.org/)<br>
 **Part 1 Prerequisites:** Ability to set up a Node.js server with a framework such as Express.
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h-ZCVUAzR-0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
 
 Apollo GraphQL is an excellent platform for building full-stack GraphQL web applications, and [Apollo Docs](https://www.apollographql.com/docs/) has a full-stack tutorial to help new users get started. This tutorial loosely parallels that one; however, this one should be a bit easier to follow. Our example app won't be anywhere near as cool or as good-looking as the one in the Apollo Docs tutorial, but you'll be able to write your own Apollo-React-Node project boilerplate code by the time you're done with this one.
 
