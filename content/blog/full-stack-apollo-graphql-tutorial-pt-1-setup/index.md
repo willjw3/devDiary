@@ -95,10 +95,19 @@ module.exports = typeDefs;
 <br>
 Okay, let's slow things down a bit and talk a little more about what we're doing and why we're doing it. About the schema, according to Apollo Docs:
 > **--** *Every graph API is centered around its schema. You can think of a schema as a blueprint that describes all of your data's types and their relationships. A schema also defines what data we can fetch through queries and what data we can update through mutations. It is strongly typed, which unlocks powerful developer tooling.*
+<br>
 
-For now, maybe you could think of our Apollo Server creating a data cloud that envelops our entire app, grabs all the data we'll need and makes it 'magically' ready in the cloud, so that when it's needed our app can just grab the bits of data it wants and use them quickly. More realistically speaking, our GraphQL server fetches all the data we could possibly need in our app and processes it as soon as it's up and running, making that data available for querying with a very simple and intuitive query pattern. When our app needs the data, the waiting time for a response from a source API is cut out because the call has already been made by Apollo Server. There's no waiting time for that response (which may be oversized for our needs) to be processed either because, as you may have guessed, that has also been taken care of. The only waiting time we need to worry about is the time it takes to get the data from our App's graph (created by the GraphQL server, and what we have abstractly thought of as a 'cloud').
+Oftentimes, the response you get when making a request can be unsatisfying; you just can't get what you want in the way that you want it. This is as much true of life in general as it is of web development.
+<br>
 
-In short, we'll be able to get just the data we want through very simple queries on the front end. However, on the back-end, we'll have to tell our GraphQL server (Apollo Server in this case) how to extract the data from the various responses it'll get from our data-source API requests so it can give us exactly what we need. It's not all magic, you know... &#128580;
+With GraphQL, you don't have to worry about that, though. 
+<br>
+
+How does it all work? 
+<br>
+Well, to help get your head around it, it might be useful to create your own abstract visualization. For now, maybe you could think of our Apollo Server creating a data cloud that envelops our entire app, grabs all the data we'll need and makes it 'magically' ready in the cloud, so that when it's needed our app can just grab the bits of data it wants and use them quickly. More realistically speaking, our GraphQL server fetches all the data we could possibly need in our app and processes it as soon as it's up and running, making that data available for querying with a very simple and intuitive query pattern. When our app needs the data, the waiting time for a response from a source API is cut out because the call has already been made by Apollo Server. There's no waiting time for that response (which may be oversized for our needs) to be processed either because, as you may have guessed, that too has been taken care of. The only waiting time we need to worry about is the time it takes to get the data from our App's graph (created by the GraphQL server, it's what we have abstractly thought of as a 'cloud').
+
+In short, we'll be able to get just the data we want through very simple queries on the front end. However, on the back end, we'll have to tell our GraphQL server (Apollo Server in this case) how to extract the data from the various responses it'll get from our data-source API requests so it can give us exactly what we need. It's not all magic, you know... &#128580;
 
 Anyway, in our `schema.js` file we import `gql` and use the [schema definition language (SDL)](https://graphql.org/learn/schema/#type-language) between the backticks to define our types. Initially, we want to fetch a list of earthquakes that occurred within a range of dates (which can be specified in the request to the API) and we want a user to be able to add quakes of interest to a list attached to their profile. So, for now we'll fill in our `schema.js` file in the following way (between the backticks!):
 <br>
@@ -296,7 +305,7 @@ Hopefully, you see in the console:
 If not, debug time for you. Good luck!
 <br>
 
-So, we've done the basic setup for our project. In the next part, we'll explore what things will look like from the front-end with [GraphQL Playground](https://github.com/prisma/graphql-playground). See you there!
+So, we've done the basic setup for our project. In the next part, we'll explore what things will look like from the front end with [GraphQL Playground](https://github.com/prisma/graphql-playground). See you there!
 
 
 

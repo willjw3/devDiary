@@ -45,6 +45,7 @@ const BlogPost = (props) => {
             </div>
             <br />
             <small><i>Published on </i> {post.frontmatter.date}</small>
+            <hr/>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <CustomShareBlock title={post.frontmatter.title} siteName={siteName} url={url} />
           </div>
