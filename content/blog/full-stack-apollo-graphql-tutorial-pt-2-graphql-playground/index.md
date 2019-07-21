@@ -8,6 +8,10 @@ date: '2019-07-20'
 **Part 1 Prerequisites:** Successful completion of [part 1](https://developer-log.netlify.com/full-stack-apollo-graphql-tutorial-pt-1-setup/).
 <br>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sOWRdvhMCVY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
 If you were able to get your Apollo Server up and running,
 <br>
 ```
