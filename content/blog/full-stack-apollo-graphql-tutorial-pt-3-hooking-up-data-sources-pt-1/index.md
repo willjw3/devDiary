@@ -8,6 +8,10 @@ date: '2019-07-23'
 **Part 3 Prerequisites:** Successful completion of [part 1](https://developer-log.netlify.com/full-stack-apollo-graphql-tutorial-pt-1-setup/) and [part 2](https://developer-log.netlify.com/full-stack-apollo-graphql-tutorial-pt-2-graphql-playground/).
 <br>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/x6eXbus6UJo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
 In the last part, we used GraphQL Playground to explore our schema from the browser. Today, we'll hook up one of our data sources, an external API, and after we've done that, we'll be able to run a query using GraphQL Playground.
 
 We're going to get earthquake data from the USGS [Earthquake Catalog](https://earthquake.usgs.gov/fdsnws/event/1/). At this point, we have no idea what the response from there will look like, so let's look into that now. Create a temporary folder (meaning you'll delete it afterward) called `dataexplore` (or whatever you like), and make new file in there called, say, `quakefetch.js`. Import the dependency `node-fetch` and paste the following into the file:
