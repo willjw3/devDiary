@@ -5,7 +5,7 @@ published: true
 date: '2019-07-20'
 ---
 
-**Part 1 Prerequisites:** Successful completion of [part 1](https://developer-log.netlify.com/full-stack-apollo-graphql-tutorial-pt-1-setup/).
+**Part 2 Prerequisites:** Successful completion of [part 1](https://developer-log.netlify.com/full-stack-apollo-graphql-tutorial-pt-1-setup/).
 <br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sOWRdvhMCVY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
