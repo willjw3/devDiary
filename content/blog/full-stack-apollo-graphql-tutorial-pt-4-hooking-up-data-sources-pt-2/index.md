@@ -5,7 +5,7 @@ published: true
 date: '2019-07-25'
 ---
 
-**Part 3 Prerequisites:** Successful completion of [part 3](https://developer-log.netlify.com/full-stack-apollo-graphql-tutorial-pt-3-hooking-up-data-sources-pt-1/).
+**Part 4 Prerequisites:** Successful completion of [part 3](https://developer-log.netlify.com/full-stack-apollo-graphql-tutorial-pt-3-hooking-up-data-sources-pt-1/).
 <br>
 
 In part 3, we built our `QuakeAPI` using the Apollo package `apollo-datasource-rest`. This time we'll use the package `apollo-datasource` to build a custom `UserAPI` data source, so add that dependency now.
