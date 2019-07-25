@@ -184,7 +184,7 @@ npm i apollo-datasource-rest
 And, paste in the following code to your `quake.js` file:
 <br>
 
-*datasources/quake.js*
+*server/datasources/quake.js*
 ```
 const { RESTDataSource } = require('apollo-datasource-rest');
 
@@ -204,7 +204,7 @@ module.exports = QuakeAPI;
 First, recall that this tutorial parallels [the one at Apollo Docs](https://www.apollographql.com/docs/tutorial/data-source/#connect-a-rest-api), so that's the code we're building upon. The `RESTDataSource` package has something like the `fetch` API built into it for making API requests. We've added the base URL for the USGS Earthquake Catalog. For specific queries, we'll have to extend the request url. Add the following code to your `QuakeAPI` class:
 <br>
 
-*datasources/quake.js*
+*server/datasources/quake.js*
 ```
  async getAllQuakes() {
         const query = "query?format=geojson&starttime=2014-01-01&endtime=2014-01-02"
@@ -219,7 +219,7 @@ First, recall that this tutorial parallels [the one at Apollo Docs](https://www.
 This function gets the response. Pay particular attention to the line `const query = "query?format=geojson&starttime=2014-01-01&endtime=2014-01-02"`. We create the `query` string and in the next line, it gets appended to the `baseURL`, and the `GET` request is made. Remember, `response.features` is an array, so we map over it, and for each quake object in it, a function called `quakeReducer()` gets the data we need from it and builds our customized quake object. Let's add `quakeReducer()` to our file now.
 <br> 
 
-*datasources/quake.js*
+*server/datasources/quake.js*
 ```
 quakeReducer(quake) {
     const date = new Date(quake.properties.time)
