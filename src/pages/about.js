@@ -30,7 +30,7 @@ const AboutPage = (props) => {
                         </p>
                         <hr/>
                         <h4>Availability</h4>
-                        <p>I'm usually available to take on projects, so contact me and maybe we can work together. You can find out more about me at my <a href="https://willjw3.github.io/">personal web site</a>.</p>
+                        <p>I'm usually available to take on projects, so contact me and maybe we can work together. You can find out more about me at my <a href="https://willward.netlify.com/">personal web site</a>.</p>
                     </div>
                 </div>
             </div>
