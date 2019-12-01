@@ -11,9 +11,9 @@ import CustomShareBlock from "../components/CustomShareBlock"
 
 const BlogPost = (props) => {
   const post = props.data.markdownRemark
-  //let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
   let featuredImgFluid 
   featuredImgFluid = post.frontmatter.featuredImage ?post.frontmatter.featuredImage.childImageSharp.fluid : null
+  
   const labels = props.data.site.siteMetadata.labels
   const siteName = props.data.site.siteMetadata.title 
   const siteUrl = props.data.site.siteMetadata.url
@@ -51,8 +51,7 @@ const BlogPost = (props) => {
               <div style={{width: "200px", margin: "auto"}}>
                 <Img fluid={featuredImgFluid} />
               </div>
-            }
-            
+            } 
             <br />
             <small><i>Published on </i> {post.frontmatter.date}</small>
             <hr/>
