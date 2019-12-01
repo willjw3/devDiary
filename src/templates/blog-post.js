@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Img from "gatsby-image"
 import "./blog-post.css"
 
 import Sidebar from "../components/sidebar/Sidebar"
@@ -10,6 +11,9 @@ import CustomShareBlock from "../components/CustomShareBlock"
 
 const BlogPost = (props) => {
   const post = props.data.markdownRemark
+  //let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
+  let featuredImgFluid 
+  featuredImgFluid = post.frontmatter.featuredImage ?post.frontmatter.featuredImage.childImageSharp.fluid : null
   const labels = props.data.site.siteMetadata.labels
   const siteName = props.data.site.siteMetadata.title 
   const siteUrl = props.data.site.siteMetadata.url
@@ -43,6 +47,12 @@ const BlogPost = (props) => {
             <div className="d-block">
               {getTechTags(tags)}
             </div>
+            { featuredImgFluid && 
+              <div style={{width: "200px", margin: "auto"}}>
+                <Img fluid={featuredImgFluid} />
+              </div>
+            }
+            
             <br />
             <small><i>Published on </i> {post.frontmatter.date}</small>
             <hr/>
@@ -74,6 +84,13 @@ export const query = graphql`
       html
       frontmatter {
         title
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         date(formatString: "MMMM DD, YYYY")
         tags
       }
